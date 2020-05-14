@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "577294010129",
+    "firebase_url": "https://chat-86edb.firebaseio.com",
+    "project_id": "chat-86edb",
+    "storage_bucket": "chat-86edb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577294010129:android:e4a983d671eab8a5c6aeb0",
+        "android_client_info": {
+          "package_name": "binus.bmcc.candy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577294010129-7j89mbu1u7l6aongo50bl9t1mc30vu6o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClGhs4TuiF5GfDMJePGODktV-Q49b9aVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577294010129-7j89mbu1u7l6aongo50bl9t1mc30vu6o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "577294010129-160653191rr0j2o21v1bh7q4hnnmipse.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.im.fikri.realtimechat"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577294010129:android:cc3d70e438859389",
+        "android_client_info": {
+          "package_name": "com.facilitator.iak.firebasenotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577294010129-7j89mbu1u7l6aongo50bl9t1mc30vu6o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClGhs4TuiF5GfDMJePGODktV-Q49b9aVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577294010129-7j89mbu1u7l6aongo50bl9t1mc30vu6o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "577294010129-160653191rr0j2o21v1bh7q4hnnmipse.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.im.fikri.realtimechat"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577294010129:android:6c6c0c8f784b2d78",
+        "android_client_info": {
+          "package_name": "com.santriprogrammer.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577294010129-7j89mbu1u7l6aongo50bl9t1mc30vu6o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClGhs4TuiF5GfDMJePGODktV-Q49b9aVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577294010129-7j89mbu1u7l6aongo50bl9t1mc30vu6o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "577294010129-160653191rr0j2o21v1bh7q4hnnmipse.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.im.fikri.realtimechat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

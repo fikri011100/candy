@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Candy</string>
+
+    <string name="desc_get_started">your trip will be more enjoyable with us</string>
+    <string name="desc_chat">Namaku adalah Marbot dan\nsaya disini untuk membantu\nkamu</string>
+    <string name="desc_quiz">Tambah pengetahuanmu dan\n dapatkan nilai tertinggimu</string>
+    <string name="api_key">AAAAhmlnhxE:APA91bHzvJQoLkXvNpYCPvLjqBXCyNKmrwy6wJg1LnrGLNH7NvWJbDGYo4PVrFhc7L6aTqnRebaJJknzaQQiH3KM3tBq1dtLfkTMtRrYYRDUpfHlPUeHedCUiAaYoHSWYmtN4aAlREkn</string>
+
+<!--    pertanyaan pertama-->
+    <string name="question_1">Nama Candinya Quiz ini?.</string>
+    <string-array name="ques_1">
+        <item>Kidal</item>
+        <item>Djago</item>
+        <item>Borobudur</item>
+    </string-array>
+
+    <!--    pertanyaan kedua-->
+    <string name="question_2">Nama Candinya Quiz ini hayoo?.</string>
+    <string-array name="ques_2">
+        <item>Kidal</item>
+        <item>Djago</item>
+        <item>Borobudur</item>
+    </string-array>
+
+    <!--    pertanyaan ketiga-->
+    <string name="question_3">Ada apa ini?.</string>
+    <string-array name="ques_3">
+        <item>Kidal</item>
+        <item>Djago</item>
+        <item>Borobudur</item>
+    </string-array>
+
+    <!--    pertanyaan keempat-->
+    <string name="question_4">Dimana Candi Djago?.</string>
+    <string-array name="ques_4">
+        <item>Surabaya</item>
+        <item>Malang</item>
+        <item>Los Angeles</item>
+    </string-array>
+</resources>
