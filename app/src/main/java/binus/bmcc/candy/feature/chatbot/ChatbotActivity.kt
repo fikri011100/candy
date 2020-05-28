@@ -98,5 +98,6 @@ class ChatbotActivity : AppCompatActivity(), ChatContract.View {
         ref = FirebaseDatabase.getInstance().reference
 
         mPresenter = ChatbotPresenter(aiDataAIService, ref)
+
     }
 }
