@@ -10,11 +10,11 @@ import kotlinx.android.synthetic.main.activity_quiz.*
 class QuizActivity : AppCompatActivity() {
 
     private var questionArr = intArrayOf(R.string.question_1, R.string.question_2, R.string.question_3, R.string.question_4)
-    private var answerArr1 = arrayOf("Kidal", "Djago", "Borobudur")
-    private var answerArr2 = arrayOf("Kidal", "Djago", "Borobudur")
-    private var answerArr3 = arrayOf("Kidal", "Djago", "Borobudur")
-    private var answerArr4 = arrayOf("Kidal", "Djago", "Borobudur")
-    private var answerIdArr = intArrayOf(1,1,1,1)
+    private var answerArr1 = arrayOf("Jajaghu", "Baghogo", "Adudu")
+    private var answerArr2 = arrayOf("Abad ke-3 Masehi", "Abad ke-2 Masehi", "Abad ke-1 Masehi")
+    private var answerArr3 = arrayOf("DKI Jakarta", "Jawa Timur", "Jawa Tengah")
+    private var answerArr4 = arrayOf("Desa Kupang", "Desa Tumpang", "Desa Singasari")
+    private var answerIdArr = intArrayOf(0,0,1,1)
     private  var index: Int = 0
     private  var score: Int = 0
 
