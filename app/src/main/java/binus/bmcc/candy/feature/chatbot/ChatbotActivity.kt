@@ -48,7 +48,7 @@ class ChatbotActivity : AppCompatActivity(), ChatContract.View {
                 mPresenter.sendMessage(message)
             } else {
                 aiService.startListening()
-                Toast.makeText(applicationContext, "Enter message first", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Mohon diisi pertanyaannya terlebih dahulu", Toast.LENGTH_LONG).show()
             }
             edt_message.setText("")
         }
@@ -89,7 +89,7 @@ class ChatbotActivity : AppCompatActivity(), ChatContract.View {
     }
 
     fun initPresenter(){
-        val aiConfiguration = AIConfiguration("76f19d1283564fc2a13589bb645eb6d8",
+        val aiConfiguration = AIConfiguration("7ef2874f5f0643cca0b5c09c8aeebffa",
             SupportedLanguages.English,
             RecognitionEngine.System)
 

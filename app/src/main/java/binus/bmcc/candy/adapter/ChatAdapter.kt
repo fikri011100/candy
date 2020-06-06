@@ -24,10 +24,12 @@ class ChatAdapter(options: FirebaseRecyclerOptions<ChatMessage>)
             holder.userText.text = model.chat
             holder.userText.visibility = View.VISIBLE
             holder.botText.visibility = View.GONE
+            holder.imgBot.visibility = View.GONE
             Log.v("testing", "${model.chat}")
         } else {
             holder.botText.text = model.chat
             holder.botText.visibility = View.VISIBLE
+            holder.imgBot.visibility = View.VISIBLE
             holder.userText.visibility = View.GONE
             Log.v("testing bot", "${model.chat}")
         }

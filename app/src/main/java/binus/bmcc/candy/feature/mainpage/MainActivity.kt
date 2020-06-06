@@ -48,6 +48,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        usrName = sharedPref.getEmail("username", "nama")!!
+        name.setText(usrName)
+    }
+
     private fun setupDrawer() {
         drawerlayout.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL)
         drawerlayout.setOnDrawerStateChangeListener(object : ElasticDrawer.OnDrawerStateChangeListener {
