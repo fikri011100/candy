@@ -27,42 +27,37 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/cons_timer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:background="@drawable/background_timer_quiz"
+        android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline1">
 
         <TextView
-            android:id="@+id/text_timer"
+            android:id="@+id/textViewHorizontalProgress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="23"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:fontFamily="@font/roboto_bold"
+            android:text="0" />
 
-        <ImageView
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:layout_marginRight="16dp"
-            android:src="@drawable/ic_timer"
-            android:tint="@color/color_quiz_blue"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <ProgressBar
+            android:id="@+id/progressBarHorizontal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="100"
+            android:minHeight="50dp"
+            android:minWidth="350dp"
+            android:progress="1"
+            android:progressBackgroundTint="@android:color/darker_gray"
+            android:progressTint="@color/colorPrimary" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textview_capt_question"
