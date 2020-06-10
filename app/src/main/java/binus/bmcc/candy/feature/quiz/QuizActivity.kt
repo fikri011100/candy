@@ -2,6 +2,8 @@ package binus.bmcc.candy.feature.quiz
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.os.Handler
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import binus.bmcc.candy.R
@@ -18,6 +20,10 @@ class QuizActivity : AppCompatActivity() {
     private  var index: Int = 0
     private  var score: Int = 0
 
+    var isStarted = false
+    var progressStatus = 0
+    var handler: Handler? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
@@ -32,6 +38,35 @@ class QuizActivity : AppCompatActivity() {
                 setQuestion()
             }
         }
+
+        isStarted = !isStarted
+
+        handler = Handler(Handler.Callback {
+            if (isStarted) {
+                progressStatus++
+            }
+            progressBarHorizontal.progress = progressStatus
+            handler?.sendEmptyMessageDelayed(0, 600)
+
+            true
+        })
+
+        handler?.sendEmptyMessage(0)
+
+        val timer = object: CountDownTimer(60000, 100) {
+            override fun onTick(millisUntilFinished: Long) {
+                textViewHorizontalProgress.text = "${millisUntilFinished.toInt()}"
+            }
+
+            override fun onFinish() {
+                val intent = Intent(applicationContext, QuizResultActivity::class.java)
+                val asd = score * 25
+                intent.putExtra("score", asd.toString())
+                startActivity(intent)
+                finish()
+            }
+        }
+        timer.start()
     }
 
     private fun setQuestion() {
