@@ -28,16 +28,6 @@ class QuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
         setQuestion()
-        button_next_quiz.setOnClickListener {
-            if (index == 4) {
-                val intent = Intent(applicationContext, QuizResultActivity::class.java)
-                intent.putExtra("score", score.toString())
-                startActivity(intent)
-                finish()
-            } else {
-                setQuestion()
-            }
-        }
 
         isStarted = !isStarted
 
@@ -59,14 +49,27 @@ class QuizActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
+                    val intent = Intent(applicationContext, QuizResultActivity::class.java)
+                    val asd = score * 25
+                    intent.putExtra("score", asd.toString())
+                    startActivity(intent)
+                    finish()
+            }
+        }
+        timer.start()
+
+        button_next_quiz.setOnClickListener {
+            if (index == 4) {
+                timer.cancel()
                 val intent = Intent(applicationContext, QuizResultActivity::class.java)
                 val asd = score * 25
                 intent.putExtra("score", asd.toString())
                 startActivity(intent)
                 finish()
+            } else {
+                setQuestion()
             }
         }
-        timer.start()
     }
 
     private fun setQuestion() {
@@ -96,17 +99,17 @@ class QuizActivity : AppCompatActivity() {
             img_answer1.visibility = View.VISIBLE
             img_answer2.visibility = View.INVISIBLE
             img_answer3.visibility = View.INVISIBLE
-            if (index != 4) {
-                if (answerIdArr.get(index) == 0) {
-                    score++
-                }
+            if (answerIdArr.get(index) == 0) {
+                score++
             }
         }
         cons_answer2.setOnClickListener {
             img_answer1.visibility = View.INVISIBLE
             img_answer2.visibility = View.VISIBLE
             img_answer3.visibility = View.INVISIBLE
-            if (index != 4) {
+            if (index == 4) {
+                score++
+            } else {
                 if (answerIdArr.get(index) == 1) {
                     score++
                 }
@@ -116,10 +119,8 @@ class QuizActivity : AppCompatActivity() {
             img_answer1.visibility = View.INVISIBLE
             img_answer2.visibility = View.INVISIBLE
             img_answer3.visibility = View.VISIBLE
-            if (index != 4) {
-                if (answerIdArr.get(index) == 2) {
-                    score++
-                }
+            if (answerIdArr.get(index) == 2) {
+                score++
             }
         }
         index++
