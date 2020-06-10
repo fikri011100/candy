@@ -52,6 +52,7 @@
             android:paddingLeft="10dp"
             android:fontFamily="@font/roboto_bold"
             android:drawableLeft="@drawable/ic_user"
+            android:inputType="textEmailAddress"
             android:hint="Email"
             app:layout_constraintBottom_toTopOf="@+id/edt_password" />
 

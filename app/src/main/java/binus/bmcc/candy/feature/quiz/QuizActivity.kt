@@ -31,8 +31,7 @@ class QuizActivity : AppCompatActivity() {
         button_next_quiz.setOnClickListener {
             if (index == 4) {
                 val intent = Intent(applicationContext, QuizResultActivity::class.java)
-                val asd = score * 25
-                intent.putExtra("score", asd.toString())
+                intent.putExtra("score", score.toString())
                 startActivity(intent)
                 finish()
             } else {
@@ -97,17 +96,17 @@ class QuizActivity : AppCompatActivity() {
             img_answer1.visibility = View.VISIBLE
             img_answer2.visibility = View.INVISIBLE
             img_answer3.visibility = View.INVISIBLE
-            if (answerIdArr.get(index) == 0) {
-                score++
+            if (index != 4) {
+                if (answerIdArr.get(index) == 0) {
+                    score++
+                }
             }
         }
         cons_answer2.setOnClickListener {
             img_answer1.visibility = View.INVISIBLE
             img_answer2.visibility = View.VISIBLE
             img_answer3.visibility = View.INVISIBLE
-            if (index == 4) {
-                score++
-            } else {
+            if (index != 4) {
                 if (answerIdArr.get(index) == 1) {
                     score++
                 }
@@ -117,8 +116,10 @@ class QuizActivity : AppCompatActivity() {
             img_answer1.visibility = View.INVISIBLE
             img_answer2.visibility = View.INVISIBLE
             img_answer3.visibility = View.VISIBLE
-            if (answerIdArr.get(index) == 2) {
-                score++
+            if (index != 4) {
+                if (answerIdArr.get(index) == 2) {
+                    score++
+                }
             }
         }
         index++

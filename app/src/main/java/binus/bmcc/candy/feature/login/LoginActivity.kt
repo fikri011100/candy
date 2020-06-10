@@ -36,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun login(email: String, password: String) {
+        var usrnNmTemp = ""
         if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this@LoginActivity, "Email atau passwod harus diisi", Toast.LENGTH_LONG).show()
         } else {
@@ -51,11 +52,13 @@ class LoginActivity : AppCompatActivity() {
                             for (noteDataSnapshot : DataSnapshot in p0.children) {
                                 val usr: User? = noteDataSnapshot.getValue(User::class.java)
                                 sharedPreferences.setUsername("username", usr!!.username)
+                                usrnNmTemp = usr.username!!
                             }
                         }
 
                     })
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    intent.putExtra("nama", usrnNmTemp)
                     startActivity(intent)
                 } else {
                     Toast.makeText(this@LoginActivity, "Username atau password salah", Toast.LENGTH_LONG).show()

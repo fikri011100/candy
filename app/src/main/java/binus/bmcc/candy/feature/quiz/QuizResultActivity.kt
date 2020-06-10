@@ -3,6 +3,8 @@ package binus.bmcc.candy.feature.quiz
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.annotation.IntegerRes
 import binus.bmcc.candy.R
 import binus.bmcc.candy.feature.mainpage.MainActivity
 import binus.bmcc.candy.utils.SharedPref
@@ -21,9 +23,11 @@ class QuizResultActivity : AppCompatActivity() {
         usrName = sharedPref.getEmail("username", "nama")!!
         try {
             val ss:String = intent.getStringExtra("score")
-            textview_score.setText(ss)
+            var scores = ss.toInt() * 25
+            textview_score.setText(scores.toString())
             text_current.setText("Congratulations!")
             text_high_score.setText("New High Score")
+            Log.d("score", scores.toString())
         } catch (e: Exception) {
 
         }
