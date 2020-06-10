@@ -15,7 +15,7 @@
     </string-array>
 
     <!--    pertanyaan kedua-->
-    <string name="question_2">Nama Candinya Quiz ini hayoo?.</string>
+    <string name="question_2"></string>
     <string-array name="ques_2">
         <item>Kidal</item>
         <item>Djago</item>
