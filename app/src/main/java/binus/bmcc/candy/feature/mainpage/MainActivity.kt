@@ -54,6 +54,11 @@ class MainActivity : AppCompatActivity() {
         name.setText(usrName)
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
+    }
+
     private fun setupDrawer() {
         drawerlayout.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL)
         drawerlayout.setOnDrawerStateChangeListener(object : ElasticDrawer.OnDrawerStateChangeListener {

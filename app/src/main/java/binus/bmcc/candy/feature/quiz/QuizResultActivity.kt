@@ -23,11 +23,10 @@ class QuizResultActivity : AppCompatActivity() {
         usrName = sharedPref.getEmail("username", "nama")!!
         try {
             val ss:String = intent.getStringExtra("score")
-            var scores = ss.toInt() * 25
-            textview_score.setText(scores.toString())
+            textview_score.setText(ss)
             text_current.setText("Congratulations!")
             text_high_score.setText("New High Score")
-            Log.d("score", scores.toString())
+            Log.d("score", ss)
         } catch (e: Exception) {
 
         }
